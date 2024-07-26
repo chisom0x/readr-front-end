@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+      .alert-success {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      .alert-error {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+      .alert-container {
+        margin-bottom: 1rem;
+      }
+    </style>
+</head>
+<body class="bg-yellow-50 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <button onclick="window.history.back()" class="mb-4 text-orange-500 hover:underline flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.414V12a1 1 0 01-2 0V6.586L6.707 9.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 6.586z" clip-rule="evenodd" />
+            </svg>
+            Back
+        </button>
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <form id="login-form">
+            <div id="alert" class="alert-container hidden p-4 rounded-lg"></div>
+            <div class="mb-4">
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Email address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <button type="submit" id="submit-button" class="w-full bg-orange-500 text-white p-3 rounded-lg font-semibold hover:bg-orange-600">Login</button>
+        </form>
+        <p class="mt-4 text-center">Don't have an account? <a href="#" class="text-orange-500 font-semibold hover:underline">Sign Up</a></p>
+    </div>
+
+    <script src="./scripts/login.js"></script>
+</body>
+</html>
